@@ -1,0 +1,130 @@
+1.
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner scn = new Scanner(System.in);
+System.out.println(“Enter the length of array: ”);
+int n = scn.nextInt();
+int[] arr = new int[n];
+for(int i = 0; i < n; i++){
+arr[i] = scn.nextInt();
+}
+int[] ans = new int[n];
+int idx = 0;
+for(int i = 0; i < n; i++){
+if(arr[i] >= 0){
+ans[idx] = arr[i];
+idx++;
+}
+}
+for(int i = 0; i < n; i++){
+if(arr[i] < 0){
+ans[idx] = arr[i];
+idx++;
+}
+}
+for(int i = 0; i < n; i++){
+System.out.print(ans[i] + " ");
+}
+}
+2.
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner scn = new Scanner(System.in);
+System.out.println(“Enter the length of arrays: ”);
+int n = scn.nextInt();
+int m = scn.nextInt();
+int[] a = new int[n];
+int[] b = new int[n];
+for(int i = 0; i < n; i++){
+a[i] = scn.nextInt();
+}
+for(int i = 0; i < m; i++){
+b[i] = scn.nextInt();
+boolean check = false;
+for(int j = 0; j < n; j++){
+if(b[i] == a[j]){
+check = true;
+break;
+}
+}
+if(!check){
+System.out.println(b[i]);
+  
+ }
+ }
+ }
+ }
+ 3.
+ import java.util.Scanner;
+import java.util.Arrays;
+public class Test {
+public static void main(String[] args) {
+Scanner scn = new Scanner(System.in);
+System.out.println(“Enter the length of array: ”);
+int n = scn.nextInt();
+int[] arr = new int[n];
+for(int i = 0; i < n; i++){
+arr[i] = scn.nextInt();
+}
+int k = scn.nextInt();
+Arrays.sort(arr);
+System.out.print(arr[k-1]);
+}
+}
+4.
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner scn = new Scanner(System.in);
+System.out.println(“Enter the length of array: ”);
+int n = scn.nextInt();
+int s = scn.nextInt();
+int[] arr = new int[n];
+for(int i = 0; i < n; i++){
+arr[i] = scn.nextInt();
+}
+int i = 0;
+int j = 0;
+int sum = 0;
+while(j < n){
+sum += arr[j];
+if(sum > s){
+while(sum > s && i < j){
+sum -= arr[i];
+i++;
+}
+}
+if(sum == s){
+System.out.print(i + " ");
+System.out.print(j);
+break;
+}
+j++;
+}
+}
+}
+5.
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner scn = new Scanner(System.in);
+System.out.println(“Enter the length of array: ”);
+int n = scn.nextInt();
+int[] arr1 = new int[n];
+int[] arr2 = new int[n];
+for(int i = 0; i < n; i++){
+arr1[i] = scn.nextInt();
+}
+boolean ans = true;
+for(int i = 0; i < n; i++){
+arr2[i] = scn.nextInt();
+if(arr2[i] != arr1[i]){
+ans = false;
+break;
+}
+}
+System.out.print(ans);
+}
+}
